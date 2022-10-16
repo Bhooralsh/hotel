@@ -10,5 +10,6 @@ public interface UserService {
 	List<User>getAllUser();
 	
 	Optional<User> getUserById(String id);
+	List<User> getAllUserBySort(String id);
 }
 

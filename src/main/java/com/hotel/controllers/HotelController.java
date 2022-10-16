@@ -20,7 +20,7 @@ public class HotelController {
 	@Autowired
 	private HotelService hotelService;
 
-	@GetMapping("/hotel/")
+	@GetMapping("/hotel")
 	public List<Hotel> getAllHotels() {
 
 		List<Hotel> hotels = hotelService.getAllHotel();
@@ -33,7 +33,7 @@ public class HotelController {
 		return hotel;
 	}
 
-	@GetMapping("/id")
+	@GetMapping("/hotel/")
 	public List<Hotel> getAllHotelTheSort(@RequestParam(value = "sort", required = false) String asc) {
 		List<Hotel> allHotel = hotelService.getAllBySort(asc);
 		return allHotel;
