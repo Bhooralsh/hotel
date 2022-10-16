@@ -6,7 +6,7 @@ Network            Description
 
 
 
-/hotel               Retrieves All hotels
+/hotel                Retrieves All hotels
 /hotel/{id}           Retrieves a specific hotel based on it's ID
 /hotel/?sort=name    Retrieves All hotels by specific field value in ascending 
 
