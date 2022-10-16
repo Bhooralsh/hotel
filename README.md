@@ -35,13 +35,14 @@ Network ------------------------Description
 /user/?sort=id-------------------Retrieves All user by specific field value in descending  
 
 
-
+========================================================================================================================
 
 
 
 
 
 Database Tables
+========================
 
 
 CREATE TABLE `hotel` (
