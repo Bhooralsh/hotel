@@ -9,7 +9,7 @@ Network                                             Description
 /hotel                                           Retrieves All hotels
 
 
-/hotel/{id}           Retrieves a specific hotel based on it's ID
+/hotel/{id}                                      Retrieves a specific hotel based on it's ID
 
 
 
