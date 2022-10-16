@@ -4,8 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.hotel.entities.Hotel;
 import com.hotel.entities.Room;
 import com.hotel.respository.RoomRepository;
 import com.hotel.service.RoomService;
@@ -29,5 +31,14 @@ public class RoomServiceImpl implements RoomService {
 			Optional<Room> room = roomRepository.findById(id);
 		return room;
 	}
+
+	@Override
+	public List<Room> getAllRoomBySort(String id) {
+		// TODO Auto-generated method stub
+		return roomRepository.findAll(Sort.by(Sort.Direction.ASC,id));
+	}
+	
+	
+
 
 }

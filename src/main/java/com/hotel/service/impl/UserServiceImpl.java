@@ -4,8 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.hotel.entities.Room;
 import com.hotel.entities.User;
 import com.hotel.respository.UserRepository;
 import com.hotel.service.UserService;
@@ -29,5 +31,13 @@ public class UserServiceImpl implements UserService {
 		Optional<User> user = userRepository.findById(id);
 		return user;
 	}
+	
+	@Override
+	public List<User> getAllUserBySort(String id) {
+		// TODO Auto-generated method stub
+		return userRepository.findAll(Sort.by(Sort.Direction.DESC,id));
+	}
+	
 
+	
 }

@@ -4,11 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hotel.entities.Hotel;
 import com.hotel.entities.Room;
 import com.hotel.service.RoomService;
 
@@ -30,6 +33,12 @@ public class RoomController {
 	public Optional<Room> getRoomById(@PathVariable("id") String id) {
 		Optional<Room> room = roomService.getRoomById(id);
 		return room;
+	}
+
+	@GetMapping("/room/")
+	public List<Room> getAllRoomTheSort(@RequestParam(value = "sort", required = false) String asc) {
+		List<Room> allRoom = roomService.getAllRoomBySort(asc);
+		return allRoom;
 	}
 
 }

@@ -38,7 +38,7 @@ public class HotelServiceImpl implements HotelService {
 	@Override
 	public List<Hotel> getAllBySort(String id) {
 		// TODO Auto-generated method stub
-		return hotelRepository.findAll(Sort.by(Sort.Direction.DESC,id));
+		return hotelRepository.findAll(Sort.by(Sort.Direction.ASC,id));
 	}
 
 	
