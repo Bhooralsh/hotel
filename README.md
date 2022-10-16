@@ -2,11 +2,11 @@ All URIs start with
 http://localhost:9091/api/v1
 
 
-Network            Description
+Network                                             Description
 
 
 
-/hotel                Retrieves All hotels
+/hotel                                           Retrieves All hotels
 
 
 /hotel/{id}           Retrieves a specific hotel based on it's ID
